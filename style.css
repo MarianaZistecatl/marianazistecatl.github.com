@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "recoleta-semibold";
+  src: url("https://res.cloudinary.com/marianaz/raw/upload/v1612997086/Portafolio%202021/Recoleta_SemiBold_ozkvdt.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "neue-regular";
+  src: url("https://res.cloudinary.com/marianaz/raw/upload/v1612997150/Portafolio%202021/Neue_Haas_Grotesk_Text_Regular_oj7sy7.woff2")
+    format("woff2");
+}
+
+body {
+  font-family: "neue-regular";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "recoleta-semibold";
+}
