@@ -79,16 +79,20 @@ h6 {
 
 .header {
   width: 100vw;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-}
-
-.header h1 {
-  background-color: blue;
+  height: 600px;
   text-align: center;
 }
 
+.nombre {
+  background-color: #fd28b7;
+  /* background-image: url("https://via.placeholder.com/150"); */
+  line-height: 600px;
+}
+.nav ul {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
 .nav ul li a {
   font-family: var(--font-headings);
 }
