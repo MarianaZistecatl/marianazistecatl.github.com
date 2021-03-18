@@ -97,6 +97,47 @@ h6 {
   font-family: var(--font-headings);
 }
 
+/* About */
+.about {
+  font-family: var(---font-base);
+}
+.about > * {
+  flex: 1;
+}
+
+.about div:nth-child(1) {
+  display: grid;
+  place-content: center;
+}
+
+.about div:nth-child(2) {
+}
+
+.about-texto {
+  padding: 40px 0 20px;
+  text-align: center;
+}
+.about-img {
+}
+.about-descs {
+  display: flex;
+  flex-direction: row;
+}
+.about-desc-uno {
+  color: blue;
+  max-width: fit-content;
+  transform: rotate(-30deg);
+  padding: 60px;
+}
+.about-desc-dos {
+  color: blue;
+  max-width: fit-content;
+  transform: rotate(-30deg);
+  padding: 60px;
+}
+.about-desc-full {
+}
+
 /* Utilities */
 .flex {
   display: flex;
