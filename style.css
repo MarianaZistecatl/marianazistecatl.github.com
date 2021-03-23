@@ -22,7 +22,7 @@
   --secundario-claro: #b2b3b2;
   --secundario-fuerte: #000000; */
   --bg: #ffffff;
-  --font-base: "neue-regular";
+  font-family: "neue-regular";
   --font-headings: "recoleta-semibold";
   /* --h1: 121px;
   --h2: 81px;
@@ -35,7 +35,7 @@
 /* Base */
 body {
   background-color: var(--primario);
-  font-family: var(---font-base);
+  font-family: inherit;
 }
 
 h1,
@@ -72,6 +72,10 @@ h6 {
  font-size: var(--h6);
 }
 */
+
+a {
+  text-decoration: none;
+}
 /* Componentes */
 .layout {
   min-height: 100vh;
@@ -79,17 +83,33 @@ h6 {
 
 .header {
   width: 100vw;
-  height: 600px;
+  /* height: 600px; */
+  height: 90vh;
   text-align: center;
+  background-image: url("https://res.cloudinary.com/marianaz/image/upload/v1616523672/Portafolio%202021/HOME_cr5u5e.jpg");
+  background-size: cover;
 }
 
 .nombre {
-  background-color: #fd28b7;
-  /* background-image: url("https://via.placeholder.com/150"); */
-  line-height: 600px;
+  /* line-height: 600px; */
+  line-height: 90vh;
+  position: relative;
+  color: var(--primario);
+  z-index: 1;
+}
+.nombre:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 500px;
+  background-color: black;
+  z-index: -1;
 }
 .nav ul {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
 }
