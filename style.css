@@ -158,6 +158,79 @@ a {
 .about-desc-full {
 }
 
+.proyectos {
+}
+.proyectos-lista {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.proyectos-lista li:nth-child(1) {
+  /* impresos*/
+  grid-column: 1 /2;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
+
+  /* align-self: start;
+  align-self: end;
+  justify-self: start;
+  justify-self: end; */
+}
+.proyectos-lista li:nth-child(2) {
+  /* encuadernación*/
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.proyectos-lista li:nth-child(3) {
+  /* tipografía*/
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.proyectos-lista li:nth-child(4) {
+  /* ilustración*/
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+.proyectos-lista li:nth-child(5) {
+  /* diseño editorial*/
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.proyectos-lista li:nth-child(6) {
+  /* identidad gráfica*/
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.proyectos-lista li:nth-child(7) {
+  /* branding*/
+  grid-column: 3 / 4;
+  grid-row: 1 /2;
+}
+.proyectos-lista li:nth-child(8) {
+  /* multimedia*/
+  grid-column: 3 /4;
+  grid-row: 2 /3;
+}
+
+.proyectos-lista li:nth-child(9) {
+  /* diseño digital*/
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.proyectos-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 10px;
+}
+
+.proyectos-images img {
+}
+
 /* Utilities */
 .flex {
   display: flex;
