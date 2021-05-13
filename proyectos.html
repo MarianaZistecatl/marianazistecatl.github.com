@@ -50,15 +50,46 @@
     </section>
     <section class="proyectos">
       <ul class="proyectos-lista" role="list">
-        <li><a href="#">impresos</a></li>
-        <li><a href="#">encuadernación</a></li>
-        <li><a href="#">tipografía</a></li>
-        <li><a href="#">ilustración</a></li>
-        <li><a href="#">diseño editorial</a></li>
-        <li><a href="#">identidad gráfica</a></li>
-        <li><a href="#">branding</a></li>
-        <li><a href="#">multimedia</a></li>
-        <li><a href="#">diseño digital</a></li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">impresos</a>
+          <div x-spread="info">
+            <div class="impresos-info">
+              <img src="https://picsum.photos/id/684/600/400" alt="" />
+            </div>
+          </div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">encuadernación</a>
+          <div x-spread="info">encuadernacion</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">tipografía</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">ilustración</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">diseño editorial</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">identidad gráfica</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">branding</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">multimedia</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">diseño digital</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
       </ul>
       <div class="proyectos-images">
         <img
@@ -118,11 +149,15 @@
         alt="" /> <img
         src=https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_10_nzua8z.jpg
         alt="" /> <img
-        src=https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_12_cmiygn.jpg
-        alt="" /> <img
-        src=https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_11_cryi9l.jpg
+        src="https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_12_cmiygn.jpg
         alt="" />
+        <img
+          src="https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_11_cryi9l.jpg"
+          alt="texto de la imagen"
+        />
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
+    <script src="./scripts.js"></script>
   </body>
 </html>
