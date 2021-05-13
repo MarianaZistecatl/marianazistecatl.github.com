@@ -231,21 +231,21 @@ a {
 .proyectos-images img {
 }
 /* Clase 27 abril */
-.proyectos-lista li {
-  border: 1px solid black;
+.proyectos-lista li a {
+  outline: 1px solid black;
 }
 .proyectos-lista li:nth-child(1) {
   position: relative;
   justify-self: center;
   align-self: center;
-  transform: rotate(90deg);
+  transform: rotate(20deg);
 }
 
 .proyectos-lista li:nth-child(1) a::after {
   position: absolute;
-  content: url("https://res.cloudinary.com/michcoder/image/upload/v1619536049/centro/cursor_llaqgi.svg");
-  top: 40px;
-  right: 40px;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: -100px;
+  right: -150px;
   z-index: -1;
 }
 
@@ -253,16 +253,71 @@ a {
   position: relative;
   justify-self: center;
   align-self: center;
-  transform: rotate(-30deg);
+  transform: rotate(-20deg);
 }
 .proyectos-lista li:nth-child(2) a::after {
   position: absolute;
-  content: url("https://res.cloudinary.com/michcoder/image/upload/v1619536049/centro/cursor_llaqgi.svg");
-  top: -40px;
-  right: 100px;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: 300px;
+  right: -200px;
   z-index: -1;
 }
 
+.proyectos-lista li:nth-child(3) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(10deg);
+}
+
+.proyectos-lista li:nth-child(3) a::after {
+  position: absolute;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: initial0px;
+  right: -600px;
+  z-index: -1;
+}
+.proyectos-lista li:nth-child(4) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-40deg);
+}
+
+.proyectos-lista li:nth-child(5) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(10deg);
+}
+
+.proyectos-lista li:nth-child(6) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-9deg);
+}
+
+.proyectos-lista li:nth-child(7) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(10deg);
+}
+
+.proyectos-lista li:nth-child(8) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-20deg);
+}
+
+.proyectos-lista li:nth-child(9) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-15deg);
+}
 /*
 .proyectos-lista li:focus,
 .proyectos-lista li:hover {
