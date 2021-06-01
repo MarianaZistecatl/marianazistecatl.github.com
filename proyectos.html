@@ -16,8 +16,8 @@
       <h1 class="nombre">Mariana Zistecatl Espinosa</h1>
     </header>
 
-    <nav class="nav">
-      <ul role="list">
+    <nav id="parent">
+      <ul class="sticky-nav" role="list">
         <li><a href="#"> About </a></li>
         <li><a href="#"> Proyectos </a></li>
         <li><a href="#"> Contacto </a></li>
@@ -54,7 +54,11 @@
           <a x-spread="trigger">impresos</a>
           <div x-spread="info">
             <div class="impresos-info">
-              <img src="https://picsum.photos/id/684/600/400" alt="" />
+              <!-- <img src="https://picsum.photos/id/684/600/400" alt="" /> -->
+              <!-- <div class="carrusel" x-data="carouselFilter()">
+                 <div class="grid grid-cols-1 grid-rows-1" x-data="carousel()" x-init="init()">
+             </div> -->
+              info
             </div>
           </div>
         </li>
@@ -159,5 +163,6 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
     <script src="./scripts.js"></script>
+    <script src="./menu-sticky.js"></script>
   </body>
 </html>
