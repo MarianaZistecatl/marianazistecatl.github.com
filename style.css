@@ -90,12 +90,14 @@ a {
   background-size: cover;
 }
 
+/* Nombre */
 .nombre {
   /* line-height: 600px; */
   line-height: 90vh;
   position: relative;
   color: var(--primario);
   z-index: 1;
+  overflow: hidden;
 }
 .nombre:after {
   content: "";
@@ -108,13 +110,41 @@ a {
   background-color: black;
   z-index: -1;
 }
-.nav ul {
-  /* border: 1px solid black; */
-  display: flex;
-  justify-content: space-between;
+@media screen and (max-width: 415px) {
+  .nombre {
+    font-size: 24px;
+  }
 }
-.nav ul li a {
+
+/* Nav */
+.sticky-nav {
+  max-width: 90vw;
+  margin: auto;
+}
+.sticky-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* gap: 20px; */
+}
+.sticky-nav ul li {
+  flex: 1;
+  display: flex;
+}
+
+.sticky-nav ul li a {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
   font-family: var(--font-headings);
+}
+
+.sticky-nav {
+  position: sticky;
+  top: -1px;
+}
+.is-pinned {
+  color: red;
 }
 
 /* About */
