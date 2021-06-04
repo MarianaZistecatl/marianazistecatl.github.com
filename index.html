@@ -9,8 +9,8 @@
       rel="stylesheet"
       href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
     />
-    <link rel="stylesheet" href="./slider/spotlight.min.css" />
-    <link rel="stylesheet" href="./slider/style.css" />
+    <link rel="stylesheet" href="vendor/spotlight/css/spotlight.min.css" />
+    <link rel="stylesheet" href="vendor/spotlight/css/style.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="layout">
@@ -58,33 +58,33 @@
             <div class="spotlight-group" data-fit="cover" data-autohide="all">
               <a
                 class="spotlight"
-                href="slider/imagenes/brooklyn-bridge.jpg"
+                href="vendor/spotlight/img/brooklyn-bridge.jpg"
                 data-fullscreen="false"
                 data-button="Ver más..."
                 data-button-href="javascript:alert('Hola')"
                 data-description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
               >
                 <img
-                  src="slider/imagenes/brooklyn-bridge-thumb.jpg"
+                  src="vendor/spotlight/img/brooklyn-bridge-thumb.jpg"
                   alt="Proyecto 1"
                 />
               </a>
               <a
                 class="spotlight"
-                href="slider/imagenes/california.jpg"
+                href="vendor/spotlight/img/california.jpg"
                 data-description="Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
               >
                 <img
-                  src="slider/imagenes/california-thumb.jpg"
+                  src="vendor/spotlight/img/california-thumb.jpg"
                   alt="Proyecto 2"
                 />
               </a>
               <a
                 class="spotlight"
-                href="slider/imagenes/canada.jpg"
+                href="vendor/spotlight/img/canada.jpg"
                 data-description="In hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim."
               >
-                <img src="slider/imagenes/canada-thumb.jpg" alt="Proyecto 3" />
+                <img src="vendor/spotlight/img/canada-thumb.jpg" alt="Proyecto 3" />
               </a>
             </div>
           </div>
@@ -189,7 +189,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
     <script src="./scripts.js"></script>
     <script type="module">
-      import Spotlight from "./src/spotlight.js";
+      import Spotlight from "./vendor/spotlight/spotlight.js";
     </script>
   </body>
 </html>
