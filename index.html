@@ -16,15 +16,16 @@
       <h1 class="nombre">Mariana Zistecatl Espinosa</h1>
     </header>
 
-    <nav class="nav">
-      <ul role="list">
-        <li><a href="#"> About </a></li>
-        <li><a href="#"> Proyectos </a></li>
-        <li><a href="#"> Contacto </a></li>
-      </ul>
-    </nav>
+  <nav class="nav">
+        <ul role="list">
+          <li><a href="#"> About </a></li>
+          <li><a href="#"> Proyectos </a></li>
+          <li><a href="#"> Contacto </a></li>
+        </ul>
+      </nav>
 
-    <section class="about flex">
+
+    <section class="about">
       <div>
         <h2 class="about-texto">¡Holaaaaaaa, soy Mariana!</h2>
         <img
@@ -47,7 +48,51 @@
           tipografía y medios digitales
         </p>
       </div>
-      <div class="proyectos">
+    </section>
+    <section class="proyectos">
+      <ul class="proyectos-lista" role="list">
+        <li x-data="showInfo()">
+          <a x-spread="trigger">impresos</a>
+          <div x-spread="info">
+            <div class="impresos-info">
+              info
+            </div>
+          </div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">encuadernación</a>
+          <div x-spread="info">encuadernacion</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">tipografía</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">ilustración</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">diseño editorial</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">identidad gráfica</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">branding</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">multimedia</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+        <li x-data="showInfo()">
+          <a x-spread="trigger">diseño digital</a>
+          <div x-spread="info">adios!👋</div>
+        </li>
+      </ul>
+      <div class="proyectos-images">
         <img
         src=https://res.cloudinary.com/marianaz/image/upload/v1619247350/Portafolio%202021/malba_mockup_hvn51r.jpg
         alt="" /> <img
@@ -104,12 +149,14 @@
         src=https://res.cloudinary.com/marianaz/image/upload/v1619247383/Portafolio%202021/identidad_08_vbt7fj.png
         alt="" /> <img
         src=https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_10_nzua8z.jpg
-        alt="" /> <img
-        src=https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_12_cmiygn.jpg
-        alt="" /> <img
-        src=https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_11_cryi9l.jpg
         alt="" />
+        <img
+          src="https://res.cloudinary.com/marianaz/image/upload/v1619247384/Portafolio%202021/identidad_11_cryi9l.jpg"
+          alt="texto de la imagen"
+        />
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
+    <script src="./scripts.js"></script>
   </body>
 </html>
