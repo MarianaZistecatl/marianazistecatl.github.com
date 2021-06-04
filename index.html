@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
     />
+    <link rel="stylesheet" href="./slider/spotlight.min.css" />
+    <link rel="stylesheet" href="./slider/style.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="layout">
@@ -16,14 +18,13 @@
       <h1 class="nombre">Mariana Zistecatl Espinosa</h1>
     </header>
 
-  <nav class="nav">
-        <ul role="list">
-          <li><a href="#"> About </a></li>
-          <li><a href="#"> Proyectos </a></li>
-          <li><a href="#"> Contacto </a></li>
-        </ul>
-      </nav>
-
+    <nav class="nav">
+      <ul role="list">
+        <li><a href="#"> About </a></li>
+        <li><a href="#"> Proyectos </a></li>
+        <li><a href="#"> Contacto </a></li>
+      </ul>
+    </nav>
 
     <section class="about">
       <div>
@@ -54,8 +55,37 @@
         <li x-data="showInfo()">
           <a x-spread="trigger">impresos</a>
           <div x-spread="info">
-            <div class="impresos-info">
-              info
+            <div class="spotlight-group" data-fit="cover" data-autohide="all">
+              <a
+                class="spotlight"
+                href="slider/imagenes/brooklyn-bridge.jpg"
+                data-fullscreen="false"
+                data-button="Ver más..."
+                data-button-href="javascript:alert('Hola')"
+                data-description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+              >
+                <img
+                  src="slider/imagenes/brooklyn-bridge-thumb.jpg"
+                  alt="Proyecto 1"
+                />
+              </a>
+              <a
+                class="spotlight"
+                href="slider/imagenes/california.jpg"
+                data-description="Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+              >
+                <img
+                  src="slider/imagenes/california-thumb.jpg"
+                  alt="Proyecto 2"
+                />
+              </a>
+              <a
+                class="spotlight"
+                href="slider/imagenes/canada.jpg"
+                data-description="In hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim."
+              >
+                <img src="slider/imagenes/canada-thumb.jpg" alt="Proyecto 3" />
+              </a>
             </div>
           </div>
         </li>
@@ -158,5 +188,8 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
     <script src="./scripts.js"></script>
+    <script type="module">
+      import Spotlight from "./src/spotlight.js";
+    </script>
   </body>
 </html>
