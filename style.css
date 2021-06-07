@@ -1,41 +1,30 @@
 /* Tipografía */
 @font-face {
-  font-family: "recoleta-semibold";
-  src: url("https://res.cloudinary.com/marianaz/raw/upload/v1612997086/Portafolio%202021/Recoleta_SemiBold_ozkvdt.woff2")
-    format("woff2");
-  font-weight: 700;
-}
-
-@font-face {
   font-family: "neue-regular";
   src: url("https://res.cloudinary.com/marianaz/raw/upload/v1612997150/Portafolio%202021/Neue_Haas_Grotesk_Text_Regular_oj7sy7.woff2")
     format("woff2");
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "recoleta-semibold";
+  src: url("https://res.cloudinary.com/marianaz/raw/upload/v1612997086/Portafolio%202021/Recoleta_SemiBold_ozkvdt.woff2")
+    format("woff2");
+  font-weight: 700;
+}
+
 /* Variables */
 :root {
   --primario: #ffe3eb;
-  /* --primario-claro: #a2f598;
-  --primario-fuerte: #279e19;
-  --secundario: #161917;
-  --secundario-claro: #b2b3b2;
-  --secundario-fuerte: #000000; */
-  --bg: #ffffff;
-  font-family: "neue-regular";
-  --font-headings: "recoleta-semibold";
-  /* --h1: 121px;
-  --h2: 81px;
-  --h3: 54px;
-  --h4: 36px;
-  --h5: 24px;
-  --h6: 16px; */
+  --blanco: #ffffff;
+  --ff-base: "neue-regular";
+  --ff-headings: "recoleta-semibold";
 }
 
 /* Base */
 body {
   background-color: var(--primario);
-  font-family: inherit;
+  font-family: var(--ff-base);
 }
 
 h1,
@@ -44,61 +33,31 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-headings);
+  font-family: var(--ff-headings);
 }
-
-/*
-h1 {
- font-size: var(--h1);
-}
-
-h2 {
- font-size: var(--h2);
-}
-
-h3 {
- font-size: var(--h3);
-}
-
-h4 {
- font-size: var(--h4);
-}
-
-h5 {
- font-size: var(--h5);
-}
-
-h6 {
- font-size: var(--h6);
-}
-*/
 
 a {
   text-decoration: none;
 }
-/* Componentes */
-.layout {
-  min-height: 100vh;
-}
 
+/* Componentes */
+/* Header */
 .header {
-  width: 100vw;
-  /* height: 600px; */
+  width: 100%;
   height: 90vh;
   text-align: center;
   background-image: url("https://res.cloudinary.com/marianaz/image/upload/v1616523672/Portafolio%202021/HOME_cr5u5e.jpg");
   background-size: cover;
 }
 
-/* Nombre */
 .nombre {
-  /* line-height: 600px; */
   line-height: 90vh;
   position: relative;
   color: var(--primario);
   z-index: 1;
   overflow: hidden;
 }
+
 .nombre:after {
   content: "";
   position: absolute;
@@ -110,6 +69,7 @@ a {
   background-color: black;
   z-index: -1;
 }
+
 @media screen and (max-width: 415px) {
   .nombre {
     font-size: 24px;
@@ -139,108 +99,151 @@ a {
 
 /* About */
 .about {
-  font-family: var(---font-base);
-  display: flex;
-}
-
-.about > * {
-  flex: 1;
-}
-
-.about div:nth-child(1) {
   display: grid;
-  place-content: center;
-}
-
-.about div:nth-child(2) {
+  grid-template-columns: repeat(2, auto);
+  margin: 40px auto;
 }
 
 .about-texto {
-  padding: 40px 0 20px;
   text-align: center;
-}
-.about-img {
-}
-.about-descs {
-  display: flex;
-  flex-direction: row;
-}
-.about-desc-uno {
-  color: blue;
-  max-width: fit-content;
-  transform: rotate(-30deg);
-  padding: 60px;
-}
-.about-desc-dos {
-  color: blue;
-  max-width: fit-content;
-  transform: rotate(-30deg);
-  padding: 60px;
-}
-.about-desc-full {
+  padding: 1em 0 1.5em;
 }
 
+.about img {
+  width: 400px;
+  margin: auto;
+}
+
+.about-desc-heading {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  padding: 1rem 0;
+}
+
+.about-desc-heading > * {
+  color: blue;
+  transform: rotate(-30deg);
+  padding: 60px;
+}
+
+.about-desc-content {
+  width: 46ch;
+  margin: auto;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 415px) {
+  .about {
+    display: block;
+  }
+  .about img {
+    width: 80%;
+  }
+  .about-desc-content {
+    width: 80vw;
+  }
+}
+/* Proyectos */
 .proyectos {
+  max-width: 90vw;
+  margin: auto;
 }
 .proyectos-lista {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
+  margin: auto;
+  padding: 40px 0;
+}
+
+.proyectos-lista li {
+  position: relative;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
 }
 
 .proyectos-lista li:nth-child(1) {
   /* impresos*/
   grid-column: 1 /2;
   grid-row: 1/2;
-  align-self: center;
-  justify-self: center;
-
-  /* align-self: start;
-  align-self: end;
-  justify-self: start;
-  justify-self: end; */
+  transform: rotate(20deg);
 }
+
+.proyectos-lista li:nth-child(1) a::after {
+  position: absolute;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: -130px;
+  right: -180px;
+  z-index: -1;
+}
+
 .proyectos-lista li:nth-child(2) {
   /* encuadernación*/
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  transform: rotate(-20deg);
 }
+
+.proyectos-lista li:nth-child(2) a::after {
+  position: absolute;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: 60px;
+  right: -440px;
+  z-index: -1;
+}
+
 .proyectos-lista li:nth-child(3) {
   /* tipografía*/
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  transform: rotate(10deg);
+}
+.proyectos-lista li:nth-child(3) a::after {
+  position: absolute;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: initial0px;
+  right: -600px;
+  z-index: -1;
 }
 .proyectos-lista li:nth-child(4) {
   /* ilustración*/
   grid-column: 3 / 4;
   grid-row: 3 / 4;
+  transform: rotate(-40deg);
 }
 .proyectos-lista li:nth-child(5) {
   /* diseño editorial*/
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+  transform: rotate(10deg);
 }
 .proyectos-lista li:nth-child(6) {
   /* identidad gráfica*/
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  transform: rotate(-9deg);
 }
 .proyectos-lista li:nth-child(7) {
   /* branding*/
   grid-column: 3 / 4;
   grid-row: 1 /2;
+  transform: rotate(10deg);
 }
 .proyectos-lista li:nth-child(8) {
   /* multimedia*/
   grid-column: 3 /4;
   grid-row: 2 /3;
+  transform: rotate(-20deg);
 }
 
 .proyectos-lista li:nth-child(9) {
   /* diseño digital*/
   grid-column: 2 / 3;
   grid-row: 3 / 4;
+  transform: rotate(-15deg);
 }
 
 .proyectos-images {
@@ -250,107 +253,23 @@ a {
   gap: 10px;
 }
 
-.proyectos-images img {
-}
-/* Clase 27 abril */
-.proyectos-lista li a {
-  outline: 1px solid black;
-}
-.proyectos-lista li:nth-child(1) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(20deg);
-}
-
-.proyectos-lista li:nth-child(1) a::after {
-  position: absolute;
-  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
-  top: -100px;
-  right: -150px;
-  z-index: -1;
-}
-
-.proyectos-lista li:nth-child(2) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(-20deg);
-}
-.proyectos-lista li:nth-child(2) a::after {
-  position: absolute;
-  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
-  top: 300px;
-  right: -200px;
-  z-index: -1;
-}
-
-.proyectos-lista li:nth-child(3) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(10deg);
-}
-
-.proyectos-lista li:nth-child(3) a::after {
-  position: absolute;
-  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
-  top: initial0px;
-  right: -600px;
-  z-index: -1;
-}
-.proyectos-lista li:nth-child(4) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(-40deg);
-}
-
-.proyectos-lista li:nth-child(5) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(10deg);
-}
-
-.proyectos-lista li:nth-child(6) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(-9deg);
-}
-
-.proyectos-lista li:nth-child(7) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(10deg);
-}
-
-.proyectos-lista li:nth-child(8) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(-20deg);
-}
-
-.proyectos-lista li:nth-child(9) {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transform: rotate(-15deg);
-}
-/*
-.proyectos-lista li:focus,
-.proyectos-lista li:hover {
-  transform: rotate(-30deg);
-}
-
- */
-
-.proyectos-lista li:nth-child(1) {
-}
-
 .proyectos-lista a {
   font-size: 2em;
+}
+
+.spotlight-group {
+  transform: rotate(-20deg);
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+}
+
+.spotlight {
+  display: contents;
+}
+
+.spotlight img {
+  margin: auto;
+  width: 100%;
+  min-width: 200px;
 }
