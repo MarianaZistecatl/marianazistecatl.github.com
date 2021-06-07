@@ -41,15 +41,15 @@ a {
 }
 
 /* Componentes */
-/* Header */
 .header {
-  width: 100%;
+  width: 100vw;
   height: 90vh;
   text-align: center;
   background-image: url("https://res.cloudinary.com/marianaz/image/upload/v1616523672/Portafolio%202021/HOME_cr5u5e.jpg");
   background-size: cover;
 }
 
+/* Nombre */
 .nombre {
   line-height: 90vh;
   position: relative;
@@ -57,7 +57,6 @@ a {
   z-index: 1;
   overflow: hidden;
 }
-
 .nombre:after {
   content: "";
   position: absolute;
@@ -69,7 +68,6 @@ a {
   background-color: black;
   z-index: -1;
 }
-
 @media screen and (max-width: 415px) {
   .nombre {
     font-size: 24px;
@@ -99,151 +97,103 @@ a {
 
 /* About */
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  margin: 40px auto;
+  font-family: var(---font-base);
+  display: flex;
 }
+
+.about > * {
+  flex: 1;
+}
+
+.about div:nth-child(1) {
+  display: grid;
+  place-content: center;
+}
+
+/* .about div:nth-child(2) {
+} */
 
 .about-texto {
+  padding: 40px 0 20px;
   text-align: center;
-  padding: 1em 0 1.5em;
 }
-
-.about img {
-  width: 400px;
-  margin: auto;
+/* .about-img {
+} */
+.about-descs {
+  display: flex;
+  flex-direction: row;
 }
-
-.about-desc-heading {
-  display: grid;
-  grid-auto-flow: column;
-  place-content: center;
-  padding: 1rem 0;
-}
-
-.about-desc-heading > * {
+.about-desc-uno {
   color: blue;
+  max-width: fit-content;
   transform: rotate(-30deg);
   padding: 60px;
 }
-
-.about-desc-content {
-  width: 46ch;
-  margin: auto;
-  line-height: 1.6;
+.about-desc-dos {
+  color: blue;
+  max-width: fit-content;
+  transform: rotate(-30deg);
+  padding: 60px;
+}
+/* .about-desc-full {
 }
 
-@media screen and (max-width: 415px) {
-  .about {
-    display: block;
-  }
-  .about img {
-    width: 80%;
-  }
-  .about-desc-content {
-    width: 80vw;
-  }
-}
-/* Proyectos */
 .proyectos {
-  max-width: 90vw;
-  margin: auto;
-}
+} */
 .proyectos-lista {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
-  margin: auto;
-  padding: 40px 0;
-}
-
-.proyectos-lista li {
-  position: relative;
-  text-align: center;
-  justify-self: center;
-  align-self: center;
 }
 
 .proyectos-lista li:nth-child(1) {
   /* impresos*/
   grid-column: 1 /2;
   grid-row: 1/2;
-  transform: rotate(20deg);
+  align-self: center;
+  justify-self: center;
 }
-
-.proyectos-lista li:nth-child(1) a::after {
-  position: absolute;
-  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
-  top: -130px;
-  right: -180px;
-  z-index: -1;
-}
-
 .proyectos-lista li:nth-child(2) {
   /* encuadernación*/
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  transform: rotate(-20deg);
 }
-
-.proyectos-lista li:nth-child(2) a::after {
-  position: absolute;
-  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
-  top: 60px;
-  right: -440px;
-  z-index: -1;
-}
-
 .proyectos-lista li:nth-child(3) {
   /* tipografía*/
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  transform: rotate(10deg);
-}
-.proyectos-lista li:nth-child(3) a::after {
-  position: absolute;
-  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
-  top: initial0px;
-  right: -600px;
-  z-index: -1;
 }
 .proyectos-lista li:nth-child(4) {
   /* ilustración*/
   grid-column: 3 / 4;
   grid-row: 3 / 4;
-  transform: rotate(-40deg);
 }
 .proyectos-lista li:nth-child(5) {
   /* diseño editorial*/
   grid-column: 1 / 2;
   grid-row: 3 / 4;
-  transform: rotate(10deg);
 }
 .proyectos-lista li:nth-child(6) {
   /* identidad gráfica*/
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  transform: rotate(-9deg);
 }
 .proyectos-lista li:nth-child(7) {
   /* branding*/
   grid-column: 3 / 4;
   grid-row: 1 /2;
-  transform: rotate(10deg);
 }
 .proyectos-lista li:nth-child(8) {
   /* multimedia*/
   grid-column: 3 /4;
   grid-row: 2 /3;
-  transform: rotate(-20deg);
 }
 
 .proyectos-lista li:nth-child(9) {
   /* diseño digital*/
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  transform: rotate(-15deg);
 }
 
 .proyectos-images {
@@ -253,11 +203,100 @@ a {
   gap: 10px;
 }
 
-.proyectos-lista a {
-  font-size: 2em;
+/* .proyectos-images img {
+} */
+
+.proyectos-lista li a {
+  outline: 1px solid black;
+}
+.proyectos-lista li:nth-child(1) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(20deg);
 }
 
-div[x-spread="info"] > div {
-  display: flex;
-  gap: 20px;
+.proyectos-lista li:nth-child(1) a::after {
+  position: absolute;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: -100px;
+  right: -150px;
+  z-index: -1;
+}
+
+.proyectos-lista li:nth-child(2) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-20deg);
+}
+.proyectos-lista li:nth-child(2) a::after {
+  position: absolute;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: 300px;
+  right: -200px;
+  z-index: -1;
+}
+
+.proyectos-lista li:nth-child(3) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(10deg);
+}
+
+.proyectos-lista li:nth-child(3) a::after {
+  position: absolute;
+  content: url("https://res.cloudinary.com/marianaz/image/upload/v1620254606/Portafolio%202021/estrella_vlnwpm.png");
+  top: initial0px;
+  right: -600px;
+  z-index: -1;
+}
+.proyectos-lista li:nth-child(4) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-40deg);
+}
+
+.proyectos-lista li:nth-child(5) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(10deg);
+}
+
+.proyectos-lista li:nth-child(6) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-9deg);
+}
+
+.proyectos-lista li:nth-child(7) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(10deg);
+}
+
+.proyectos-lista li:nth-child(8) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-20deg);
+}
+
+.proyectos-lista li:nth-child(9) {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(-15deg);
+}
+
+/* .proyectos-lista li:nth-child(1) {
+} */
+
+.proyectos-lista a {
+  font-size: 2em;
 }
