@@ -257,7 +257,19 @@ a {
   font-size: 2em;
 }
 
-div[x-spread="info"] > div {
-  display: flex;
+.spotlight-group {
+  transform: rotate(-20deg);
+  display: grid;
+  grid-auto-flow: column;
   gap: 20px;
+}
+
+.spotlight {
+  display: contents;
+}
+
+.spotlight img {
+  margin: auto;
+  width: 100%;
+  min-width: 200px;
 }
